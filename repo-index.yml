@@ -1,0 +1,21 @@
+- name: tell-me-a-joke-plugin
+  description: This plugin tries to brighten up your day
+  version: __TAG__
+  created: 2015-12-22T00:00:00Z
+  updated: __TODAY__
+  company:
+  authors:
+  - name: Johannes Tuchscherer
+    homepage: https://github.com/jtuchscherer
+    contact: jtuchschererg@gmail.com
+  homepage: https://github.com/jtuchscherer/tell-me-a-joke-plugin
+  binaries:
+  - platform: osx
+    url: https://github.com/jtuchscherer/tell-me-a-joke-plugin/releases/download/__TAG__/tell-me-a-joke-plugin-darwin
+    checksum: __osx-sha1__
+  - platform: win64
+    url: https://github.com/jtuchscherer/tell-me-a-joke-plugin/releases/download/__TAG__/tell-me-a-joke-plugin.exe
+    checksum: __win64-sha1__
+  - platform: linux64
+    url: https://github.com/jtuchscherer/tell-me-a-joke-plugin/releases/download/__TAG__/tell-me-a-joke-plugin-linux
+    checksum: __linux64-sha1__
