@@ -21,9 +21,9 @@ if [[ "$1" = "release" ]] ; then
 	fi
 fi
 
-LINUX_FILENAME="whoami-plugin-linux"
-MAC_FILENAME="whoami-plugin-darwin"
-WIN_FILENAME="whoami-plugin.exe"
+LINUX_FILENAME="tell-me-a-joke-plugin-linux"
+MAC_FILENAME="tell-me-a-joke-plugin-darwin"
+WIN_FILENAME="tell-me-a-joke-plugin.exe"
 
 GOOS=linux GOARCH=amd64 go build -o $LINUX_FILENAME
 LINUX64_SHA1=`cat $LINUX_FILENAME | openssl sha1`
@@ -52,7 +52,7 @@ cat
 
 if [[ "$1" = "release" ]] ; then
 	git commit -am "Build version $TAG" || true
-	git tag -a $TAG -m "Whoami Plugin v$TAG"
+	git tag -a $TAG -m "tell-me-a-joke-plugin v$TAG"
 	echo "Tagged release, 'git push --follow-tags' to push it to github, upload the binaries to github"
 	echo "and copy the output above to the cli repo you plan to deploy in"
 fi
