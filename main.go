@@ -60,7 +60,7 @@ func NewTellMeAJokeCmd(jokeServerURL string) *TellMeAJokeCmd {
 	return &TellMeAJokeCmd{jokeServerURL: jokeServerURL}
 }
 
-// Run will be executed when cf whoami gets invoked
+// Run will be executed when cf tell-me-a-joke gets invoked
 func (c *TellMeAJokeCmd) Run(cliConnection plugin.CliConnection, args []string) {
 	if args[0] != "tell-me-a-joke" {
 		return
