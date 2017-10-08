@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-func TestWhoamiPlugin(t *testing.T) {
+func TestTellMeAJokePlugin(t *testing.T) {
 	RegisterFailHandler(Fail)
 	pluginbuilder.BuildTestBinary(".", "main")
 	RunSpecs(t, "TellMeAJokePlugin Suite")
