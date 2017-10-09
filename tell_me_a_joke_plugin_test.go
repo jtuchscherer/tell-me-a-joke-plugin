@@ -115,7 +115,7 @@ var _ = Describe("TellMeAJokePlugin", func() {
 				Eventually(outputChan, 2).Should(Receive(&output))
 				outputString := strings.Join(output, "")
 				Expect(outputString).To(ContainSubstring("FAILED"))
-			})
+			}, 2)
 		})
 
 	})
