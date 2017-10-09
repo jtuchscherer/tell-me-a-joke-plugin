@@ -14,7 +14,7 @@ import (
 )
 
 type joke struct {
-	Id     string `json:"id"`
+	ID     string `json:"id"`
 	Text   string `json:"joke"`
 	Status int    `json:"status"`
 }
@@ -56,6 +56,7 @@ func main() {
 	plugin.Start(NewTellMeAJokeCmd(serverURL))
 }
 
+// NewTellMeAJokeCmd returns a reference to a new TellMeAJokeCmd
 func NewTellMeAJokeCmd(jokeServerURL string) *TellMeAJokeCmd {
 	return &TellMeAJokeCmd{jokeServerURL: jokeServerURL}
 }
